@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    color: var(--dark-grayish-blue);
+    background: var(--cream);
+    font-family: var(--montserrat);
+    font-weight: 500;
+}
+
+h1 {
+    color: var(--very-dark-blue);
+    font-family: var(--fraunces);
+}
