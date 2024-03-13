@@ -2,3 +2,110 @@
 @use 'variables';
 @use 'media-queries' as *;
 @use 'bases';
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        min-height: 100vh;
+        width: 35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 2rem;
+
+        @include md {
+            width: 40rem;
+        }
+
+        @include lg {
+            flex-direction: row;
+            align-items: center;
+            width: 70rem;
+        }
+
+        .card-image {
+            height: 27rem;
+            width: 35rem;
+            background: url(./../images/image-product-mobile.jpg) center/cover;
+            border-radius: 1rem 1rem 0 0;
+
+            @include md {
+                width: 40rem;
+            }
+
+            @include lg {
+                height: 50rem;
+                width: 50%;
+                border-radius: 1rem 0 0 1rem;
+                background: url(./../images/image-product-desktop.jpg) center/cover;
+            }
+        }
+
+        .card-body {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 0 0 1rem 1rem;
+
+            @include lg {
+                height: 50rem;
+                width: 50%;
+                border-radius: 0 1rem 1rem 0;
+            }
+
+            .card-product {
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                padding-bottom: 1rem;
+            }
+
+            .card-title {
+                font-size: 4rem;
+            }
+
+            .card-description {
+                padding: 2rem 0;
+            }
+
+            .card-prices {
+                display: flex;
+                align-items: center;
+
+                .card-discount {
+                    font-size: 4rem;
+                    font-family: var(--fraunces);
+                    color: var(--dark-cyan);
+                }
+
+                .card-price {
+                    margin-left: 2rem;
+                    text-decoration: line-through;
+                }
+            }
+
+            .card-btn {
+                background: var(--dark-cyan);
+                color: var(--white);
+                border: none;
+                width: 100%;
+                padding: 2rem 0;
+                border-radius: 1rem;
+                font-weight: 700;
+                letter-spacing: .1rem;
+                margin: 2rem 0 0 0;
+                transition: all .3s;
+
+                &:hover {
+                    background: var(--very-dark-blue);
+                }
+
+                i {
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+}

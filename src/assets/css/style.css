@@ -63,4 +63,107 @@ h1 {
   font-family: var(--fraunces);
 }
 
+img {
+  max-width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .card {
+  min-height: 100vh;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+}
+@media only screen and (min-width: 768px) {
+  main .card {
+    width: 40rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  main .card {
+    flex-direction: row;
+    align-items: center;
+    width: 70rem;
+  }
+}
+main .card .card-image {
+  height: 27rem;
+  width: 35rem;
+  background: url(./../images/image-product-mobile.jpg) center/cover;
+  border-radius: 1rem 1rem 0 0;
+}
+@media only screen and (min-width: 768px) {
+  main .card .card-image {
+    width: 40rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  main .card .card-image {
+    height: 50rem;
+    width: 50%;
+    border-radius: 1rem 0 0 1rem;
+    background: url(./../images/image-product-desktop.jpg) center/cover;
+  }
+}
+main .card .card-body {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 0 0 1rem 1rem;
+}
+@media only screen and (min-width: 992px) {
+  main .card .card-body {
+    height: 50rem;
+    width: 50%;
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+main .card .card-body .card-product {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  padding-bottom: 1rem;
+}
+main .card .card-body .card-title {
+  font-size: 4rem;
+}
+main .card .card-body .card-description {
+  padding: 2rem 0;
+}
+main .card .card-body .card-prices {
+  display: flex;
+  align-items: center;
+}
+main .card .card-body .card-prices .card-discount {
+  font-size: 4rem;
+  font-family: var(--fraunces);
+  color: var(--dark-cyan);
+}
+main .card .card-body .card-prices .card-price {
+  margin-left: 2rem;
+  text-decoration: line-through;
+}
+main .card .card-body .card-btn {
+  background: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0 0 0;
+  transition: all 0.3s;
+}
+main .card .card-body .card-btn:hover {
+  background: var(--very-dark-blue);
+}
+main .card .card-body .card-btn i {
+  padding-right: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */
